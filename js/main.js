@@ -12,18 +12,7 @@ let pipes = {
     width: 52,
     p: new Array()
 }
-$(document).ready(() => {
 
-    if (window.location.search === '?debug')
-        debugmode = true
-    if (window.location.search === '?easy')
-        pipes.height = 200
-
-    let savedScore = getCookie('highscore') 
-    if (savedScore != ' ')
-        score.hs = parseInt(savedScore)
-    showStartScreen()
-})
 let fisic = {
     gravity: 0.25,
     velocity: 0,
@@ -52,8 +41,18 @@ function showStartScreen() {
 }
 
  $(document).ready(function() {
+        if (window.location.search === '?debug')
+            debugmode = true
+        if (window.location.search === '?easy')
+            pipes.height = 200
+
+        let savedScore = getCookie('highscore') 
+        if (savedScore != '')
+            score.hs = parseInt(savedScore)
+        showStartScreen()
+        console.log()
+
     $("#restart").click(function () {
-        console.log('asssssssssas')
         if(!replayclickable)
            return
         else
@@ -102,13 +101,9 @@ function startGame() {
             fisic.position = 0
 
         if (pipes.p[0] === undefined){
-            console.log('n retornando')
             return
         }
-        console.log('fora do if')
-            
-
-        console.log(pipes.p)
+        
 
         
          let nextpipe = pipes.p[0]
@@ -118,7 +113,6 @@ function startGame() {
          let pipeleft = nextpipeupper.offset().left - 2
          let piperight = pipeleft + pipes.width
          let pipebottom = pipetop + pipes.height
-         console.log('a')
         if (boxright > pipeleft) {
             if (!(boxtop > pipetop && boxbottom < pipebottom)) {
                 flappyDead()

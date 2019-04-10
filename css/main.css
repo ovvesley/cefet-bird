@@ -25,10 +25,10 @@
     width: 100%;
     height: 80%;
     /*20% do Footer*/
-    background-image: url("/assets/sky.png");
+    background-image: url("../assets/sky.png");
     background-repeat: repeat-x;
     background-position: 0px 100%;
-    background-color: #4ec0ca;
+    background-color: #f2cf73;
     -webkit-animation: animSky 7s linear infinite;
     animation: animSky 7s linear infinite;
 }
@@ -45,7 +45,7 @@
     top: -16px;
     height: 16px;
     width: 100%;
-    background-image: url("/assets/ceiling.png");
+    background-image: url("../assets/ceiling.png");
     background-repeat: repeat-x;
     -webkit-animation: animBricks 481ms linear infinite;
     animation: animBricks 481ms linear infinite;
@@ -56,7 +56,7 @@
     bottom: 0;
     width: 100%;
     height: 20%;
-    background-image: url("/assets/land.png");
+    background-image: url("../assets/land.png");
     background-repeat: repeat-x;
     background-position: 0px 0px;
     background-color: #ded895;
@@ -83,7 +83,7 @@
     left: 65px;
     width: 188px;
     height: 170px;
-    background-image: url("/assets/splash.png");
+    background-image: url("../assets/splash.png");
     background-repeat: no-repeat;
 }
 
@@ -95,7 +95,7 @@
     left: 43px;
     width: 236px;
     height: 280px;
-    background-image: url("/assets/scoreboard.png");
+    background-image: url("../assets/scoreboard.png");
     background-repeat: no-repeat;
     z-index: 1000;
 }
@@ -164,7 +164,7 @@
     position: absolute;
     width: 34px;
     height: 24px;
-    background-image: url("/assets/bird.png");
+    background-image: url("../assets/bird.png");
     -webkit-animation: animBird 300ms steps(4) infinite;
     animation: animBird 300ms steps(4) infinite;
 }
@@ -194,14 +194,14 @@
     bottom: 0;
     width: 52px;
     height: 26px;
-    background-image: url("/assets/pipe-down.png");
+    background-image: url("../assets/pipe-down.png");
 }
 
 .pipe_lower {
     position: absolute;
     bottom: 0;
     width: 52px;
-    background-image: url("/assets/pipe.png");
+    background-image: url("../assets/pipe.png");
     background-repeat: repeat-y;
     background-position: center;
 }
@@ -212,5 +212,19 @@
     top: 0;
     width: 52px;
     height: 26px;
-    background-image: url("/assets/pipe-up.png");
+    background-image: url("../assets/pipe-up.png");
+}
+
+#intern-bg
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80%;
+    /*20% do Footer*/
+    background-image: url("../assets/sky.png");
+    background-repeat: repeat-x;
+    background-position: 0px 100%;
+    background-color: #f2cf73;
+    -webkit-animation: animSky 7s linear infinite;
+    animation: animSky 7s linear infinite;
 }
