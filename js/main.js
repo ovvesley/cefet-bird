@@ -112,13 +112,10 @@ function startGame() {
 
         
          let nextpipe = pipes.p[0]
-
-        // console.log(pipes.p.length)
-        // console.log(nextpipe)
          let nextpipeupper = nextpipe.children(".pipe_upper")
 
          let pipetop = nextpipeupper.offset().top + nextpipeupper.height()
-         let pipeleft = nextpipeupper.offset().left - 2 // Por algum motivo ele começa no deslocamento dos tubos internos , e não os tubos exteriores 
+         let pipeleft = nextpipeupper.offset().left - 2
          let piperight = pipeleft + pipes.width
          let pipebottom = pipetop + pipes.height
          console.log('a')
@@ -164,8 +161,6 @@ function updatePipes(){
     let constrain = (420 - pipes.height - (padding * 2))
     let topHeight = Math.floor((Math.random()*constrain) + padding)
     let bottomHeight = (420 - pipes.height) - topHeight
-    //var newpipe = $('<div class="pipe animated"><div class="pipe_upper" style="height: ' + topheight + 'px;"></div><div class="pipe_lower" style="height: ' + bottomheight + 'px;"></div></div>')
-
     let newPipe = $('<div class="pipe animated"><div class="pipe_upper" style="height: ' + topHeight + 'px;"></div><div class="pipe_lower" style="height: ' + bottomHeight + 'px;"></div></div>')
     $('#fly-area-game').append(newPipe)
     pipes.p.push(newPipe)
@@ -185,10 +180,10 @@ var isIncompatible = {
     return navigator.userAgent.match(/Opera Mini/i)
     },
     Safari: function() {
-    return (navigator.userAgent.match(/OS X.*Safari/) && ! navigator.userAgent.match(/Chrome/));
+    return (navigator.userAgent.match(/OS X.*Safari/) && ! navigator.userAgent.match(/Chrome/))
     },
     Windows: function() {
-    return navigator.userAgent.match(/IEMobile/i);
+    return navigator.userAgent.match(/IEMobile/i)
     },
     any: function() {
     return (isIncompatible.Android() || isIncompatible.BlackBerry() || isIncompatible.iOS() || isIncompatible.Opera() || isIncompatible.Safari() || isIncompatible.Windows())
