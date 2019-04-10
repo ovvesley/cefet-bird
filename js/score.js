@@ -11,7 +11,7 @@ function setBigScore(erase) {
         return
     let digits =score.s.toString().split('')
     for (let i = 0; i < digits.length; i++)
-        elemscore.append("<img src='assets/font_big_" + digits[i] + ".png' alt='" + digits[i] + "'>")
+        elemscore.append("<img src='/assets/font_big_" + digits[i] + ".png' alt='" + digits[i] + "'>")
 }
 
 function setSmallScore() {
@@ -19,7 +19,7 @@ function setSmallScore() {
     elemscore.empty()
     let digits =score.s.toString().split('')
     for (let i = 0; i < digits.length; i++)
-        elemscore.append("<img src='assets/font_small_" + digits[i] + ".png' alt='" + digits[i] + "'>")
+        elemscore.append("<img src='/assets/font_small_" + digits[i] + ".png' alt='" + digits[i] + "'>")
 }
 
 
@@ -28,7 +28,7 @@ function setHighScore() {
     elemscore.empty()
     let digits = score.hs.toString().split('')
     for (let i = 0; i < digits.length; i++)
-        elemscore.append("<img src='assets/font_small_" + digits[i] + ".png' alt='" + digits[i] + "'>")
+        elemscore.append("<img src='/assets/font_small_" + digits[i] + ".png' alt='" + digits[i] + "'>")
 }
 
 function setMedal() {
@@ -44,7 +44,7 @@ function setMedal() {
         medal = "gold"
     if (score.s>= 40)
         medal = "platinum"
-    elemmedal.append('<img src="assets/medal_' + medal + '.png" alt="' + medal + '">')
+    elemmedal.append('<img src="/assets/medal_' + medal + '.png" alt="' + medal + '">')
     return true;
 }
 
