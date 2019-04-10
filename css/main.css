@@ -1,0 +1,216 @@
+﻿html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 12px;
+    color: white;
+}
+
+#main-game {
+    position: relative;
+    max-width: 767px;
+    height: 100%;
+    min-height: 525px;
+}
+
+#screen-game {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#background-game {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80%;
+    /*20% do Footer*/
+    background-image: url("/assets/sky.png");
+    background-repeat: repeat-x;
+    background-position: 0px 100%;
+    background-color: #4ec0ca;
+    -webkit-animation: animSky 7s linear infinite;
+    animation: animSky 7s linear infinite;
+}
+
+#fly-area-game {
+    position: absolute;
+    bottom: 0;
+    height: 420px;
+    width: 100%;
+}
+
+#bricks {
+    position: absolute;
+    top: -16px;
+    height: 16px;
+    width: 100%;
+    background-image: url("/assets/ceiling.png");
+    background-repeat: repeat-x;
+    -webkit-animation: animBricks 481ms linear infinite;
+    animation: animBricks 481ms linear infinite;
+}
+
+#footer-game {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background-image: url("/assets/land.png");
+    background-repeat: repeat-x;
+    background-position: 0px 0px;
+    background-color: #ded895;
+    -webkit-animation: animTerrain 2500ms linear infinite;
+    animation: animTerrain 2500ms linear infinite;
+}
+
+#score-big {
+    position: absolute;
+    top: 20px;
+    left: 150px;
+    z-index: 100;
+}
+
+#score-big img {
+    display: inline-block;
+    padding: 1px;
+}
+
+#screen-start {
+    position: absolute;
+    opacity: 0;
+    top: 75px;
+    left: 65px;
+    width: 188;
+    height: 170px;
+    background-image: url("/assets/splash.png");
+    background-repeat: no-repeat;
+}
+
+#score-board {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    top: 64px;
+    left: 43px;
+    width: 236px;
+    height: 280px;
+    background-image: url("/assets/scoreboard.png");
+    background-repeat: no-repeat;
+    z-index: 1000;
+}
+
+#medal {
+    position: absolute;
+    opacity: 0;
+    top: 114px;
+    left: 32px;
+    width: 44px;
+    height: 44px;
+}
+
+#score-current {
+    position: absolute;
+    top: 105px;
+    left: 107px;
+    width: 104px;
+    height: 14px;
+    text-align: right;
+}
+
+#score-current img {
+    padding-left: 2px;
+}
+
+#score-best {
+    position: absolute;
+    top: 147px;
+    left: 107px;
+    width: 104px;
+    height: 14px;
+    text-align: right;
+}
+
+#score-best img {
+    padding-left: 2px;
+}
+
+#restart {
+    position: absolute;
+    opacity: 0;
+    top: 205px;
+    left: 61px;
+    height: 115px;
+    width: 70px;
+    cursor: pointer;
+}
+
+.boundingbox {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 1px solid red;
+}
+
+#flappy {
+    left: 60px;
+    top: 200px;
+}
+
+.bird {
+    position: absolute;
+    width: 34px;
+    height: 24px;
+    background-image: url("/assets/bird.png");
+    -webkit-animation: animBird 300ms steps(4) infinite;
+    animation: animBird 300ms steps(4) infinite;
+}
+
+.pipe {
+    position: absolute;
+    left: -100px;
+    width: 52px;
+    height: 100%;
+    z-index: 10;
+    -webkit-animation: animPipe 7500ms linear;
+    animation: animPiper 7500ms linear;
+}
+
+.pipe_lower {
+    position: absolute;
+    top: 0;
+    width: 52px;
+    background-image: url("/assets/pipe.png");
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+.piper_upper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 52px;
+    height: 26px;
+    background-image: url("/assets/pipe-down.png")
+}
+
+.pipe_lower {
+    position: absolute;
+    top: 0;
+    width: 52px;
+    background-image: url("/assets/pipe.png");
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+.piper_lower::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 52px;
+    height: 26px;
+    background-image: url("/assets/pipe-up.png")
+}
