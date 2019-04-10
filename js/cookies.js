@@ -1,5 +1,4 @@
-function getCookie(cName)
-{
+function getCookie(cName){
     let name = cName + '='
     let ca = document.cookie.split(';')
     for(let index = 0; index< ca.length; index++){
@@ -15,8 +14,7 @@ function setCookie(cName,cValue,exDay)
     let d = new Date()
     d.setTime(d.getTime()+(exDay*24*60*60*1000))
     let expires = 'expires=' + d.toGMTString()
-    document.cookie = cname + '=' + cValue + '; ' + expires
-    
+    document.cookie = cName + '=' + cValue + '; ' + expires   
 
 
 }
