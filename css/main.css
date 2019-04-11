@@ -214,17 +214,3 @@
     height: 26px;
     background-image: url("../assets/pipe-up.png");
 }
-
-#intern-bg
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 80%;
-    /*20% do Footer*/
-    background-image: url("../assets/sky.png");
-    background-repeat: repeat-x;
-    background-position: 0px 100%;
-    background-color: #f2cf73;
-    -webkit-animation: animSky 7s linear infinite;
-    animation: animSky 7s linear infinite;
-}
