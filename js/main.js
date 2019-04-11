@@ -47,8 +47,9 @@ function showStartScreen() {
             pipes.height = 200
 
         let savedScore = getCookie('highscore') 
-        if (savedScore != '')
+        if (savedScore != ' ')
             score.hs = parseInt(savedScore)
+            
         showStartScreen()
         console.log()
 

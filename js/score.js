@@ -1,10 +1,11 @@
 let replayclickable = false
 let score = {
     s: 0,
-    hs: 0,
+    hs: 0
 }
 function setBigScore(erase) {
     let elemscore = $("#score-big")
+    console.log('entrou no BIGSCORE')
     elemscore.empty()
     if (erase)
         return
@@ -19,18 +20,17 @@ function setSmallScore() {
     let digits =score.s.toString().split('')
     console.log(digits)
     for (let i = 0; i < digits.length; i++)
-        elemscore.append("<img src='assets/font_small_" + digits[i] + ".png' alt='" + digits[i] + "'>")
+        elemscore.append("<img src='../assets/font_small_" + digits[i] + ".png' alt='" + digits[i] + "'>")
 }
 
 
 function setHighScore() {
-    console.log(score.hs)
     let elemscore = $("#score-best")
     elemscore.empty()
     let digits = score.hs.toString().split('')
     console.log(digits)
     for (let i = 0; i < digits.length; i++)
-        elemscore.append("<img src='assets/font_small_" + digits[i] + ".png' alt='" + digits[i] + "'>")
+        elemscore.append("<img src='../assets/font_small_" + digits[i] + ".png' alt='" + digits[i] + "'>")
 }
 
 function setMedal() {
@@ -46,7 +46,7 @@ function setMedal() {
         medal = "gold"
     if (score.s>= 40)
         medal = "platinum"
-    elemmedal.append('<img src="assets/medal_' + medal + '.png" alt="' + medal + '">')
+    elemmedal.append('<img src="../assets/medal_' + medal + '.png" alt="' + medal + '">')
     return true;
 }
 
@@ -55,9 +55,8 @@ function showScore(){
     setBigScore(true)
     if(score.s> score.hs){
         score.hs = score.s;
-        setCookie('highscore', score.hs, 60*60*24)
+        setCookie('highscore', score.hs, 999)
     }
-    console.log('showscore - ' + score.hs)
     setSmallScore()
     setHighScore()
 
