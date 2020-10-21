@@ -1,5 +1,23 @@
 # Flappy-Bird
-Flappy Bird fidedigno ao oficial em HTML, CSS, JS. Utilizando JQuery e Buzz.
+
+<p align="center">
+   
+  <h2 align="center">Flappy Bird</h2>
+  
+-----
+<p align="center">  
+  <img src="home-screen.gif">  
+</p>
+
+---
+
+<span>Flappy Bird fidedigno ao oficial em HTML, CSS, JS. Utilizando JQuery e Buzz.</span>
+
+---
+
+<p align="center">  
+  <img src="print.png">  
+</p>
 
 ### Site Estatico:
 https://vvesley-cefetbird.netlify.com/
