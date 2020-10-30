@@ -1,7 +1,7 @@
 # Flappy-Bird
 
 <p align="center">
-   
+  <img align="center" src="https://raw.githubusercontent.com/ovvesley/cefet-bird/master/birda.png" width="50">
   <h2 align="center">Flappy Bird</h2>
   
 -----
